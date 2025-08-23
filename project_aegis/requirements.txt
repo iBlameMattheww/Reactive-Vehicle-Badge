@@ -1,0 +1,5 @@
+obd
+rpi_ws281x==5.0.0
+adafruit-circuitpython-neopixel
+RPi.GPIO==0.7.1
+
