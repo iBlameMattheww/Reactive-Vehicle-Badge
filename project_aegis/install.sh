@@ -112,6 +112,6 @@ sudo systemctl restart project_aegis.service
 echo "Reactive Badge installation complete."
 echo "Use 'sudo systemctl status project_aegis.service' to check the service status."
 =======
-echo "✅ Reactive Badge installation complete!"
+echo "Reactive Badge installation complete!"
 >>>>>>> 931f0ebd28402e21858e4b67656e32ec0fcc671b
 
