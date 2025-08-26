@@ -3,6 +3,9 @@ set -euo pipefail
 
 echo "=== Reactive Badge Installer ==="
 
+sudo apt-get update
+sudo apt-get install -y git
+
 echo ">> Removing old Aegis directory..."
 rm -rf "${HOME}/Aegis"
 
