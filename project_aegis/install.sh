@@ -12,9 +12,8 @@ sudo apt-get install -y bluetooth bluez bluez-tools rfkill
 echo ">> Scanning for Android-Vlink Bluetooth adapter..."
 timeout 30s bluetoothctl scan on
 sleep 5
-Device_MAC=$(bluetoothctl devices | grep -i "Android-Vlink" | awk '{print $2}' | head -n1)
-
 set +e
+Device_MAC=$(bluetoothctl devices | grep -i "Android-Vlink" | awk '{print $2}' | head -n1)
 if [ -n "${Device_MAC}" ]; then
   echo ">> Android-Vlink Bluetooth adapter found."
   echo ">> Pairing with $Device_MAC..."
