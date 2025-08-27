@@ -9,10 +9,11 @@ sudo apt-get install -y git
 echo ">> (Optional) Installing Bluetooth and BLE tools"
 sudo apt-get install -y bluetooth bluez bluez-tools rfkill
 
-echo ">> Checking for Bluetooth adapter..."
-if hciconfig | grep -q hci0; then
-  echo ">> Bluetooth adapter found."
-  sudo hciconfig hci0 up
+echo ">> Checking for Android-Vlink Bluetooth adapter..."
+Device_MAC=$(timeout 20s bluetoothctl scan on | grep -i "Android-Vlink" | awk '{print $2}' | head -n1)
+if [ -n "${Device_MAC}" ]; then
+  echo ">> Android-Vlink Bluetooth adapter found."
+  echo -e "pair $Device_MAC\ntrust $Device_MAC\nconnect $Device_MAC\nquit" | bluetoothctl
   BLE_Configured=true
 else
   echo ">> Bluetooth adapter not found. BLE setup will be skipped."
@@ -91,5 +92,5 @@ sudo systemctl restart project_aegis.service
 
 echo "Reactive Badge installation complete!"
 if [ "${BLE_Configured}" = false ]; then
-  echo "Bluetooth setup was skipped. For more details on how to manually setup Bluetooth, please refer to the documentation:" # add link when done
+  echo "Bluetooth setup was skipped. For more details on how to manually setup Bluetooth or serial, please refer to the documentation:" # add link when done
 fi
