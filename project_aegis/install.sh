@@ -6,6 +6,22 @@ echo "=== Reactive Badge Installer ==="
 sudo apt-get update
 sudo apt-get install -y git
 
+echo ">> (Optional) Installing Bluetooth and BLE tools"
+sudo apt-get install -y bluetooth bluez bluez-tools rfkill
+
+echo ">> Checking for Bluetooth adapter..."
+if hciconfig | grep -q hci0; then
+  echo ">> Bluetooth adapter found."
+  sudo hciconfig hci0 up
+  BLE_Configured=true
+else
+  echo ">> Bluetooth adapter not found. BLE setup will be skipped."
+  BLE_Configured=false
+fi
+
+echo ">> Unblocking Bluetooth if needed..."
+sudo rfkill unblock bluetooth
+
 echo ">> Removing old Aegis directory..."
 rm -rf "${HOME}/Aegis"
 
@@ -74,4 +90,6 @@ sudo systemctl enable project_aegis.service
 sudo systemctl restart project_aegis.service
 
 echo "Reactive Badge installation complete!"
-
+if [ "${BLE_Configured}" = false ]; then
+  echo "Bluetooth setup was skipped. For more details on how to manually setup Bluetooth, please refer to the documentation:" # add link when done
+fi
