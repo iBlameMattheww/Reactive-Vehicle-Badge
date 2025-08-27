@@ -10,10 +10,11 @@ echo ">> (Optional) Installing Bluetooth and BLE tools"
 sudo apt-get install -y bluetooth bluez bluez-tools rfkill
 
 echo ">> Scanning for Android-Vlink Bluetooth adapter..."
-timeout 20s bluetoothctl scan on
-sleep 2
+timeout 30s bluetoothctl scan on
+sleep 5
 Device_MAC=$(bluetoothctl devices | grep -i "Android-Vlink" | awk '{print $2}' | head -n1)
 
+set +e
 if [ -n "${Device_MAC}" ]; then
   echo ">> Android-Vlink Bluetooth adapter found."
   echo ">> Pairing with $Device_MAC..."
@@ -42,6 +43,7 @@ else
   echo ">> Bluetooth adapter not found. BLE setup will be skipped."
   BLE_Configured=false
 fi
+set -e
 
 echo ">> Unblocking Bluetooth if needed..."
 sudo rfkill unblock bluetooth
