@@ -9,8 +9,6 @@ sudo apt-get install -y git
 echo ">> Installing Bluetooth and BLE tools"
 sudo apt-get install -y bluetooth bluez bluez-tools rfkill
 
-<<<<<<< HEAD
-=======
 echo ">> Scanning for Android-Vlink Bluetooth adapter..."
 timeout 30s bluetoothctl scan on
 sleep 5
@@ -46,7 +44,6 @@ else
 fi
 set -e
 
->>>>>>> 81f98bfea5c3c919ad7d6839fe4e878f8e277350
 echo ">> Unblocking Bluetooth if needed..."
 sudo rfkill unblock bluetooth
 
