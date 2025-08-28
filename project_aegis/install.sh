@@ -6,9 +6,11 @@ echo "=== Reactive Badge Installer ==="
 sudo apt-get update
 sudo apt-get install -y git
 
-echo ">> (Optional) Installing Bluetooth and BLE tools"
+echo ">> Installing Bluetooth and BLE tools"
 sudo apt-get install -y bluetooth bluez bluez-tools rfkill
 
+<<<<<<< HEAD
+=======
 echo ">> Scanning for Android-Vlink Bluetooth adapter..."
 timeout 30s bluetoothctl scan on
 sleep 5
@@ -44,6 +46,7 @@ else
 fi
 set -e
 
+>>>>>>> 81f98bfea5c3c919ad7d6839fe4e878f8e277350
 echo ">> Unblocking Bluetooth if needed..."
 sudo rfkill unblock bluetooth
 
@@ -115,6 +118,6 @@ sudo systemctl enable project_aegis.service
 sudo systemctl restart project_aegis.service
 
 echo "Reactive Badge installation complete!"
-if [ "${BLE_Configured}" = false ]; then
-  echo "Bluetooth setup was skipped. For more details on how to manually set up Bluetooth or serial, please refer to the documentation:" # add link when done
-fi
+
+echo "For more details on how to manually set up Bluetooth or serial, please refer to the documentation:" # add link when done
+
