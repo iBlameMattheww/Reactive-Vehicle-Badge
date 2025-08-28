@@ -81,5 +81,5 @@ sudo systemctl restart project_aegis.service
 
 echo "Reactive Badge installation complete!"
 
-echo "For more details on how to manually set up Bluetooth or serial, please refer to the documentation:" # add link when done
+echo "For more details on how to manually set up Bluetooth or serial, please refer to the documentation: https://github.com/iBlameMattheww/Reactive-Vehicle-Badge/blob/main/project_aegis/Bluetooth_setup_README.md"
 
