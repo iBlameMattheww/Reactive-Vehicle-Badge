@@ -1,6 +1,6 @@
 # Manual Bluetooth Setup for Reactive Mustang Badge
 
-After running `install.sh`, follow these steps to manually connect your Android-Vlink OBD adapter via Bluetooth.
+After running `install.sh`, follow these steps to manually connect your OBD adapter via Bluetooth or serially.
 
 ---
 
@@ -79,6 +79,49 @@ You should see lines like:
 ```
 Status: CONNECTED, RPM: 0, Throttle: 0.0
 ```
+
+---
+## Serial Port Setup on Raspberry Pi
+
+By default, the Reactive Badge daemon uses the Bluetooth RFCOMM device:
+
+```python
+OBD_USB_PORT = "/dev/rfcomm0"
+```
+
+When using a USB serial connection instead, the port will show up under `/dev/serial/by-id/`.  
+This is more reliable than `/dev/ttyUSB0` because it persists across reboots and multiple USB devices.
+
+---
+
+### 1. Identify the Port
+
+Run:
+
+```bash
+ls -l /dev/serial/by-id/
+```
+
+**Example output:**
+
+```text
+usb-1a86_USB_Serial-if00-port0 -> ../../ttyUSB0
+```
+
+In this case, set:
+
+```python
+OBD_USB_PORT = "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0"
+```
+
+---
+
+### 2. Fallback Options
+
+If `/dev/serial/by-id/` is not available, you can also check:
+
+- `/dev/ttyGS0` &rarr; USB gadget serial (Zero 2W direct USB)
+- `/dev/ttyUSB0` or `/dev/ttyACM0` &rarr; USB-UART adapters
 
 ---
 
