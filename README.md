@@ -6,6 +6,11 @@ This project was built specifically around the Coyote pony badge dimensions, and
 
 This project combines electronics, embedded systems, and mechanical design to deliver a reactive, customizable badge that you can tune to your own preferences.
 
+<p align="center">
+    <img src="picsNvids/vid.gif" alt="Reactive Badge Live" width="400"/>
+
+</p>
+
 ## Features
 
 * LED pony badge that reacts to RPM and throttle input.
