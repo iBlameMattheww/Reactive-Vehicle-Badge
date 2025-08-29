@@ -47,7 +47,7 @@ Install **Raspberry Pi OS Lite (64-bit)** on your Pi Zero 2W. A step-by-step gui
 Once your Pi is running and connected, run:  
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/<yourrepo>/main/project_aegis/install.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/iBlameMattheww/Reactive-Vehicle-Badge/main/project_aegis/install.sh | sudo bash
 ```
 
 This command downloads our code directly to your Pi, installs the required Python libraries, and sets up the badge to start automatically every time the Pi boots.
