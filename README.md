@@ -75,6 +75,9 @@ All design files are included so you can print, modify, or adapt the badge for y
 - [Coyote Head Drawing (.JPG)](Mechanical/Badge_Drawings/Coyote_Head.JPG)
 - [Lense Cap Drawing (.JPG)](Mechanical/Badge_Drawings/lense_cap.JPG)  
 
+### Mechanical Drawings for Rapsberry Pi PCB Crib Enclosure
+- [Crib Lid Drawing (.JPG)](Mechanical/Enclosure/Crib_Lid.JPG)  
+- [Crib Drawing (.JPG)](Mechanical/Enclosure/Crib.JPG)  
 
 *(Mechanical drawings include all key dimensions for reference and scaling.)*  
 
