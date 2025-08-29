@@ -33,8 +33,54 @@ Full video with sound here:
 | **Buzzer + LED**   | Generic 5V buzzer + LED                                           | Used for startup/alert feedback (UI)                 |
 | **Resistor**       | 100 Ω                                                             | Current limiting; shared by buzzer and LED           |
 
+## Software
 
-Schematic
+The Pi runs a lightweight **Python program** that connects to your OBD-II adapter, reads live vehicle data (RPM, throttle, etc.), calculates an “aggressivity” score, and drives the LEDs accordingly.  
 
+### Operating System  
+
+Install **Raspberry Pi OS Lite (64-bit)** on your Pi Zero 2W. A step-by-step guide for setting up the OS and enabling SSH/WiFi can be found here:  
+[Getting Started with Raspberry Pi OS](https://www.raspberrypi.com/software/)  
+
+### Installation  
+
+Once your Pi is running and connected, run:  
+
+```bash
+curl -sSL https://raw.githubusercontent.com/<yourrepo>/main/project_aegis/install.sh | sudo bash
+```
+
+This command downloads our code directly to your Pi, installs the required Python libraries, and sets up the badge to start automatically every time the Pi boots.
+
+After installation, the only step left is to configure your ELM327 adapter (pairing it with the Pi over Bluetoothor or serial). Instructions for Bluetooth/ serial Setup
+section below.
+
+## Mechanical  
+
+The enclosure was designed specifically for the **Mustang 5.0 Coyote pony badge**.  
+All design files are included so you can print, modify, or adapt the badge for your own use.  
+
+### STL Files (3D Printing)  
+- [Badge Back Plate (.stl)](Mechanical/Final_Design_Badge_Parts/Badge_Back_Plate.STL)  
+- [Badge Front Plate (.stl)](Mechanical/Final_Design_Badge_Parts/Badge_Front_Plate.STL)
+- [Coyote Head (.stl)](Mechanical/Final_Design_Badge_Parts/Coyote_Head.STL)  
+- [LED Lense Cap (.stl)](Mechanical/Final_Design_Badge_Parts/LED_lense_cap.STL)  
+
+*(STL files are ready for slicing/printing on resin or FDM 3D printers. Resin recommended for smoother finish.)*  
+
+### Mechanical Drawings for Badge
+- [Back Plate Drawing (.JPG)](Mechanical/Badge_Drawings/Back_Plate.JPG)  
+- [Backing Drawing (.JPG)](Mechanical/Badge_Drawings/Backing.JPG)  
+- [Coyote Front Plate Drawing (.JPG)](Mechanical/Badge_Drawings/Coyote_Front_Plate.JPG)  
+- [Coyote Head Drawing (.JPG)](Mechanical/Badge_Drawings/Coyote_Head.JPG)
+- [Lense Cap Drawing (.JPG)](Mechanical/Badge_Drawings/lense_cap.JPG)  
+
+
+*(Mechanical drawings include all key dimensions for reference and scaling.)*  
+
+
+## Hardware Schematic
 
 (Replace this with actual KiCad schematic export)
+
+
