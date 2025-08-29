@@ -15,7 +15,7 @@ This project combines electronics, embedded systems, and mechanical design to de
 Full video with sound here: 
 ## Features
 
-* LED pony badge that reacts to RPM and throttle input.
+* Mustang LED 5.0 GT Coyote badge that reacts to RPM and throttle input.
 * OBD-II integration (Bluetooth or Serial via ELM327 OBD-II adapter).
 * Configurable brightness scaling and animations.
 * Fully open-source mechanical + electrical design.
