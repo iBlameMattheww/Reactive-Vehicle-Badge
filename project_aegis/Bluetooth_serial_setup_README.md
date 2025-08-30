@@ -52,10 +52,39 @@ This means your adapter supports the classic SPP profile.
 
 ## 4. Bind the Serial Port
 
+Make a custom unit:
 ```bash
-sudo rfcomm bind 0 13:E0:2F:8D:5E:DB
-ls /dev/rfcomm*
+sudo nano /etc/systemd/system/rfcomm-obd.service
 ```
+Paste:
+```bash
+[Unit]
+Description=Bind RFCOMM for OBD-II Adapter
+After=bluetooth.target
+Requires=bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sh -c 'echo -e "connect 13:E0:2F:8D:5E:DB\nquit" | bluetoothctl'
+ExecStart=/usr/bin/rfcomm bind 0 13:E0:2F:8D:5E:DB
+ExecStop=/usr/bin/rfcomm release 0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
+Enable + start:
+```bash
+sudo systemctl daemon-reexec
+sudo systemctl enable rfcomm-obd.service
+sudo systemctl start rfcomm-obd.service
+```
+Verify:
+```bash
+systemctl status rfcomm-obd.service
+ls -l /dev/rfcomm*
+```
+If it worked, you should see /dev/rfcomm0 bound.
 
 ---
 
