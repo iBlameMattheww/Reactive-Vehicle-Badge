@@ -61,10 +61,10 @@ The enclosure was designed specifically for the **Mustang 5.0 Coyote pony badge*
 All design files are included so you can print, modify, or adapt the badge for your own use.  
 
 ### STL Files (3D Printing)  
-- [Badge Back Plate (.stl)](Mechanical/Final_Design_Badge_Parts/Badge_Back_Plate.STL)  
-- [Badge Front Plate (.stl)](Mechanical/Final_Design_Badge_Parts/Badge_Front_Plate.STL)
+- [Badge Back Plate (.stl)](Mechanical/Final_Badge_Parts/Badge_Back_Plate.STL)  
+- [Badge Front Plate (.stl)](Mechanical/Final_Badge_Parts/Badge_Front_Plate.STL)
 - [Coyote Head (.stl)](Mechanical/Final_Badge_Parts/Coyote_Head.STL)  
-- [LED Lense Cap (.stl)](Mechanical/Final_Design_Badge_Parts/LED_lense_cap.STL)  
+- [LED Lense Cap (.stl)](Mechanical/Final_Badge_Parts/LED_lense_cap.STL)  
 
 *(STL files are ready for slicing/printing on resin or FDM 3D printers. Resin recommended for smoother finish.)*  
 
