@@ -8,7 +8,7 @@ This project combines electronics, embedded systems, and mechanical design to de
 
 
 <p align="center">
-    <img src="picsNvids/vid.gif" alt="Mustang GT 5.0 Revving Reactive Badge Live GIF" width="300"/>
+    <img src="picsNvids/vid2.gif" alt="Mustang GT 5.0 Revving Reactive Badge Live GIF" width="300"/>
 
 </p>
 
