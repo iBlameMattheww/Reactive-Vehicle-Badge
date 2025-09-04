@@ -271,6 +271,7 @@ For feedback or ideas, feel free to open a discussion or reach out directly.
 Hi, I'm Matthew — currently studying **Electrical Engineering and Computer Science** (yes, both), with an interest in embedded systems, hardware, and machine learning.  
 You can find and connect with me on [LinkedIn](https://http://www.linkedin.com/in/matthewobrien-eng) pretending to be more professional than I actually am.  
 
+Hi, I'm Alex — currently studying Mechanical Engineering with a minor in Aerospace Engineering, with an intrest in product design and R&D. You can connect with me on [LinkedIn](www.linkedin.com/in/alex-widner-b02817220).
 
 ---
 ## Keywords  
