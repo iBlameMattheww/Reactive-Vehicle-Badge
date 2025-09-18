@@ -12,7 +12,7 @@ This project combines electronics, embedded systems, and mechanical design to de
 
 </p>
 
-Full video with sound here: 
+A proper test video wouldn’t be complete without the **Corsa cat-back exhaust** in the background: [https://drive.google.com/file/d/1NQnQ_f8jV-Ecw5v0e2kxu76RbC8v_gCX/view?usp=sharing](https://drive.google.com/file/d/1NQnQ_f8jV-Ecw5v0e2kxu76RbC8v_gCX/view?usp=sharing)
 ## Features
 
 * Mustang LED 5.0 GT Coyote badge that reacts to RPM and throttle input.
